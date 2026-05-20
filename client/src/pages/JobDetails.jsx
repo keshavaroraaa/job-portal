@@ -115,8 +115,8 @@ const JobDetails = () => {
               <Space><EnvironmentOutlined /> <Text>{job.location}</Text></Space>
               <Space><DollarOutlined /> <Text>
                 {job.salaryMin && job.salaryMax
-                  ? `₹{job.salaryCurrency || 'INR'} ₹{Number(job.salaryMin).toLocaleString()} - ₹{Number(job.salaryMax).toLocaleString()}`
-                  : 'Salary not disclosed'}
+  ? `₹${Number(job.salaryMin).toLocaleString('en-IN')} - ₹${Number(job.salaryMax).toLocaleString('en-IN')}`
+  : 'Salary not disclosed'}
               </Text></Space>
               <Space><TeamOutlined /> <Text>{job.vacancies} {job.vacancies === 1 ? 'vacancy' : 'vacancies'}</Text></Space>
               <Space><CalendarOutlined /> <Text>Deadline: {job.applicationDeadline ? dayjs(job.applicationDeadline).format('MMM D, YYYY') : 'Rolling'}</Text></Space>
