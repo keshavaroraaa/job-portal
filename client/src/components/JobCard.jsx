@@ -36,7 +36,7 @@ const JobCard = ({ job }) => {
 
   const companyName = employer?.employerProfile?.companyName || employer?.name || 'Unknown Company';
   const displaySalary = salaryMin && salaryMax
-    ? `${salaryCurrency || 'USD'} ${Number(salaryMin).toLocaleString()} - ${Number(salaryMax).toLocaleString()}`
+    ? `${salaryCurrency || 'INR'} ${Number(salaryMin).toLocaleString('en-IN')} - ${Number(salaryMax).toLocaleString('en-IN')}`
     : 'Salary not disclosed';
 
   const typeColors = {
